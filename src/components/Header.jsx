@@ -2,53 +2,79 @@ import { NavLink } from "react-router-dom";
 
 export default function Header(){
     return(
-        <nav className="navbar">
+        <nav className="navbar navbar-expand-lg navbar-bt sticky-top">
             <div className="container">
-
-                <NavLink to="/" className="nav-brand">
-                <span>BalearTrek</span>
+                
+                <NavLink 
+                    to="/" 
+                    className="navbar-brand fw-bold"
+                >
+                    Balear<span className="text-gold-light">Trek</span>
                 </NavLink>
 
-                <div className="nav-links">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span className="navbar-toggler-icon"></span></button>
+                <div className="collapse navbar-collapse" id="nav">
+                <ul className="navbar-nav mx-auto gap-1">
+                    
+                    <NavLink 
+                        to="/meetings" 
+                        className={({ isActive }) =>
+                            isActive ? "nav-link active" : "nav-link"
+                        }
+                    >
+                        Encuentros
+                    </NavLink>
 
-                <NavLink 
-                    to="/meetings" 
-                    className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}
-                >
-                    Encuentros
-                </NavLink>
+                    <NavLink 
+                        to="/treks" 
+                        className={({ isActive }) =>
+                            isActive ? "nav-link active" : "nav-link"
+                        }
+                    >
+                        Excursiones
+                    </NavLink>
 
-                <NavLink 
-                    to="/excursiones" 
-                    className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}
-                >
-                    Excursiones
-                </NavLink>
+                    <NavLink 
+                        to="/interesting" 
+                        className={({ isActive }) =>
+                            isActive ? "nav-link active" : "nav-link"
+                        }
+                    >
+                        Lugares
+                    </NavLink>
 
-                <NavLink 
-                    to="/contact" 
-                    className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}
-                >
-                    Contacto
-                </NavLink>
+                    <NavLink 
+                        to="/contact" 
+                        className={({ isActive }) =>
+                            isActive ? "nav-link active" : "nav-link"
+                        }
+                    >
+                        Contacto
+                    </NavLink>
 
-                <NavLink 
-                    to="/information" 
-                    className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}
-                >
-                    FAQ
-                </NavLink>               
+                    <NavLink 
+                        to="/information" 
+                        className={({ isActive }) =>
+                            isActive ? "nav-link active" : "nav-link"
+                        }
+                    >
+                        Informacion
+                    </NavLink>
+
+                </ul>
+                <div className="d-flex gap-2 align-items-center">
+
+                    <NavLink 
+                        to="/login" 
+                        className={({ isActive }) =>
+                            isActive ? "nav-link active" : "nav-link"
+                        }
+                    >
+                        Iniciar sesión
+                    </NavLink>
+                    
                 </div>
-
-                <div className="nav-auth">
-                <NavLink 
-                    to="/login" 
-                    className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}
-                >
-                    Iniciar sesión
-                </NavLink>
                 </div>
-
             </div>
         </nav>
     )

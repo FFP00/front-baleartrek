@@ -3,56 +3,39 @@ import { Link } from "react-router-dom"
 export default function LandingPage(){
     return(
         <>
-            <div className="auth-wrapper">
-                <div className="form-card" style={{maxWidth:"520px"}}>
-                    <div style={{textAlign:"center", marginBottom:"2rem"}}>
-                    <a href="index.html" className="auth-brand nav-brand"><span>BalearTrek</span></a>
-                    <h2 className="auth-subtitle">Crear cuenta</h2>
+            <div class="bt-auth-wrap d-flex align-items-center justify-content-center p-3 py-5">
+            <div class="bt-auth-card-wide">
+                <div class="text-center mb-4">
+                <a href="index.html" class="text-decoration-none d-inline-block mb-3"><span class="font-serif fs-2 text-dark">Balear<span class="text-gold">Trek</span></span></a>
+                <h2 class="font-serif text-dark">Crear cuenta</h2>
+                </div>
+                <div class="bg-white shadow-sm p-4">
+                <form action="#" method="post">
+                    <div class="row g-3 mb-3">
+                    <div class="col-sm-6"><label class="bt-filter-label" for="firstName">Nombre</label><input type="text" class="form-control" id="firstName" placeholder="Juan" /></div>
+                    <div class="col-sm-6"><label class="bt-filter-label" for="lastName">Apellidos</label><input type="text" class="form-control" id="lastName" placeholder="García Pérez" /></div>
                     </div>
-
-                    <div className="form-row">
-                    <div className="form-group"><label className="form-label">Nombre</label><input className="form-input" id="firstName" placeholder="Juan" /></div>
-                    <div className="form-group"><label className="form-label">Apellidos</label><input className="form-input" id="lastName" placeholder="García Pérez" /></div>
+                    <div class="mb-3"><label class="bt-filter-label" for="idNumber">DNI / NIE</label><input type="text" class="form-control" id="idNumber" placeholder="12345678A" /></div>
+                    <div class="mb-3"><label class="bt-filter-label" for="phone">Teléfono</label><input type="tel" class="form-control" id="phone" placeholder="600 123 456" /></div>
+                    <div class="mb-3"><label class="bt-filter-label" for="email">Correo electrónico</label><input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" /></div>
+                    <div class="row g-3 mb-3">
+                    <div class="col-sm-6"><label class="bt-filter-label" for="password">Contraseña</label><input type="password" class="form-control" id="password" placeholder="Mín. 8 caracteres" /></div>
+                    <div class="col-sm-6"><label class="bt-filter-label" for="password2">Confirmar</label><input type="password" class="form-control" id="password2" placeholder="Repite la contraseña" /></div>
                     </div>
-                    <div className="form-group">
-                    <label className="form-label">DNI / NIE</label>
-                    <input className="form-input" id="idNumber" placeholder="12345678A" />
-                    </div>
-                    <div className="form-group">
-                    <label className="form-label">Teléfono</label>
-                    <input className="form-input" id="phone" type="tel" placeholder="987 654 321" />
-                    </div>
-                    <div className="form-group">
-                    <label className="form-label">Correo electrónico</label>
-                    <input className="form-input" id="email" type="email" placeholder="correo@ejemplo.com" />
-                    </div>
-                    <div className="form-row">
-                    <div className="form-group">
-                        <label className="form-label">Contraseña</label>
-                        <input className="form-input" id="password" type="password" placeholder="Mínimo 8 caracteres" />
-                    </div>
-                    <div className="form-group">
-                        <label className="form-label">Confirmar</label>
-                        <input className="form-input" id="password2" type="password" placeholder="Repite la contraseña" />
-                    </div>
-                    </div>
-
-                    <div style={{fontSize:".78rem",color:"var(--stone)",marginBottom:"1.2rem",background:"var(--cream)",padding:".75rem",borderLeft:"2px solid var(--gold)"}}>
-                    Al registrarte aceptas nuestras normas de participación y la política de privacidad.
-                    </div>
-
-                    <button className="btn btn-dark btn-full">
-                    Crear cuenta
-                    </button>
-                    <p className="auth-footer">
+                    <div class="bg-cream-dark p-3 mb-4 border-start border-4 border-warning small text-stone">Al registrarte aceptas nuestras normas de participación y la política de privacidad.</div>
+                    <button type="submit" class="btn btn-dark fw-semibold w-100">Crear cuenta →</button>
+                </form>
+                </div>
+                <p class="text-center text-stone small mt-3"> ¿Ya tienes cuenta?
                         <Link 
                             to="/login" 
+                            className="text-success text-decoration-none fw-semibold"
                         >
-                            ¿Ya tienes cuenta?
-                        </Link>     
-                    </p>
-                </div>
-            </div>        
+                            Iniciar sesión
+                        </Link>    
+                </p>
+            </div>
+            </div>
         </>
     )
 }
