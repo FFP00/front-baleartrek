@@ -27,10 +27,10 @@ export default function Card({ treks }) {
                                             </div>
                                             <h5 className="font-serif text-dark mb-2">{trek.name}</h5>
                                             <div className="d-flex justify-content-between align-items-center">
-                                                <span className="text-warning small">
-                                                    {'★'.repeat(Math.floor(parseFloat(trek.rating) / 2))}
-                                                    {'☆'.repeat(5 - Math.floor(parseFloat(trek.rating) / 2))}
-                                                </span>
+                                            <span className="text-warning small">
+                                                {'★'.repeat(Math.floor(parseFloat(trek.rating) / 2))}
+                                                {'☆'.repeat(5 - Math.floor(parseFloat(trek.rating) / 2))}
+                                            </span>
                                                 <span className="text-stone small">📋 {trek.regNumber}</span>
                                             </div>
                                         </div>
