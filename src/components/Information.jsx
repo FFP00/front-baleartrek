@@ -14,8 +14,8 @@ export default function Information(){
   <div className="bg-white shadow-sm p-4 mb-4">
     <h2 className="font-serif h4 mb-4">📋 Normas de inscripción</h2>
     <div className="row g-3">
-      <div className="col-sm-6"><div className="bg-cream p-3 h-100 border-top border-4 border-warning"><div className="fs-4 mb-2">📅</div><div className="font-serif text-dark mb-1">Apertura</div><p className="text-stone small mb-0">Las inscripciones se abren <strong>1 mes antes</strong> de la fecha del encuentro (campo <code>appDateIni</code>).</p></div></div>
-      <div className="col-sm-6"><div className="bg-cream p-3 h-100 border-top border-4 border-danger"><div className="fs-4 mb-2">⏰</div><div className="font-serif text-dark mb-1">Cierre</div><p className="text-stone small mb-0">Las inscripciones se cierran <strong>1 semana antes</strong> del encuentro (campo <code>appDateEnd</code>).</p></div></div>
+      <div className="col-sm-6"><div className="bg-cream p-3 h-100 border-top border-4 border-warning"><div className="fs-4 mb-2">📅</div><div className="font-serif text-dark mb-1">Apertura</div><p className="text-stone small mb-0">Las inscripciones se abren <strong>1 mes antes</strong> de la fecha del encuentro.</p></div></div>
+      <div className="col-sm-6"><div className="bg-cream p-3 h-100 border-top border-4 border-danger"><div className="fs-4 mb-2">⏰</div><div className="font-serif text-dark mb-1">Cierre</div><p className="text-stone small mb-0">Las inscripciones se cierran <strong>1 semana antes</strong> del encuentro.</p></div></div>
       <div className="col-sm-6"><div className="bg-cream p-3 h-100 border-top border-4 border-success"><div className="fs-4 mb-2">🔄</div><div className="font-serif text-dark mb-1">Cancelación</div><p className="text-stone small mb-0">Puedes cancelar tu inscripción hasta <strong>1 semana antes</strong> de la fecha del encuentro.</p></div></div>
       <div className="col-sm-6"><div className="bg-cream p-3 h-100 border-top border-4 border-secondary"><div className="fs-4 mb-2">🚫</div><div className="font-serif text-dark mb-1">Doble inscripción</div><p className="text-stone small mb-0">No se permite inscribirse más de una vez en el mismo encuentro.</p></div></div>
     </div>
@@ -23,7 +23,6 @@ export default function Information(){
 
   <div className="bg-white shadow-sm p-4 mb-4">
     <h2 className="font-serif h4 mb-4">⭐ Sistema de puntuación (0–5)</h2>
-    <p className="text-stone small mb-3">La puntuación media se calcula como <code>totalScore ÷ countScore</code>. Los triggers de BD actualizan estos valores automáticamente en cada insert, update y delete de meetings.</p>
     <div className="d-flex flex-column gap-2">
       <div className="d-flex align-items-center gap-3 bg-cream p-3"><span className="bt-score-inline text-warning">★★★★★</span><div><strong>5 — Excelente.</strong> <span className="text-stone">Experiencia inolvidable, recomendada al 100%.</span></div></div>
       <div className="d-flex align-items-center gap-3 bg-cream p-3"><span className="bt-score-inline text-warning">★★★★☆</span><div><strong>4 — Muy buena.</strong> <span className="text-stone">Experiencia satisfactoria con ligeras mejoras posibles.</span></div></div>
@@ -42,7 +41,6 @@ export default function Information(){
       <li>Todos los comentarios pasan por validación antes de publicarse.</li>
       <li>Solo los participantes de un encuentro pueden valorarlo.</li>
       <li>Una única valoración por encuentro y usuario.</li>
-      <li>Las valoraciones actualizan <code>totalScore</code> y <code>countScore</code> vía triggers automáticos.</li>
     </ul>
   </div>
 

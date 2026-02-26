@@ -35,7 +35,7 @@ export default function Header(){
                     </NavLink>
 
                     <NavLink 
-                        to="/interesting" 
+                        to="/places" 
                         className={({ isActive }) =>
                             isActive ? "nav-link active" : "nav-link"
                         }
